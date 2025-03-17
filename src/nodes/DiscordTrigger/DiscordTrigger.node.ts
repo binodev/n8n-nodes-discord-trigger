@@ -1,4 +1,4 @@
-import { Client, Events, GatewayIntentBits, Message } from 'discord.js';
+import { Client, Intents, Message } from 'discord.js';
 import {
 	INodeType,
 	INodeTypeDescription,
@@ -6,7 +6,6 @@ import {
 	ITriggerResponse,
 	IWebhookFunctions,
 	IWebhookResponseData,
-	ICredentialDataDecryptedObject,
 } from 'n8n-workflow';
 
 export class DiscordTrigger implements INodeType {
@@ -118,9 +117,8 @@ export class DiscordTrigger implements INodeType {
 		// Initialize Discord client
 		const client = new Client({
 			intents: [
-				GatewayIntentBits.Guilds,
-				GatewayIntentBits.GuildMessages,
-				GatewayIntentBits.MessageContent,
+				Intents.FLAGS.GUILDS,
+				Intents.FLAGS.GUILD_MESSAGES,
 			],
 		});
 
@@ -168,7 +166,7 @@ export class DiscordTrigger implements INodeType {
 
 		// Set up event listeners based on the selected event
 		if (event === 'messageCreated') {
-			client.on(Events.MessageCreate, messageHandler);
+			client.on('messageCreate', messageHandler);
 		}
 
 		// Login to Discord with the token

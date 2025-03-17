@@ -1,4 +1,4 @@
-import { INodeType, INodeTypeDescription, ICredentialType } from 'n8n-workflow';
+import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 import { DiscordTrigger } from './nodes/DiscordTrigger/DiscordTrigger.node';
 import { DiscordOAuth2Api } from './credentials/DiscordOAuth2Api.credentials';
 

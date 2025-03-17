@@ -8,7 +8,6 @@
  * node scripts/test.js
  */
 
-const { Client, Events, GatewayIntentBits } = require('discord.js');
 const { EventEmitter } = require('events');
 
 // Mock Discord client
@@ -55,7 +54,7 @@ const testTrigger = async () => {
   const client = new MockDiscordClient();
   
   // Set up event handler
-  client.on(Events.MessageCreate, (message) => {
+  client.on('messageCreate', (message) => {
     console.log(`Message received: ${message.content}`);
     console.log('Message details:', JSON.stringify(message, null, 2));
   });
@@ -67,7 +66,7 @@ const testTrigger = async () => {
   setTimeout(() => {
     console.log('Simulating a message...');
     const mockMessage = createMockMessage('Hello from test script!');
-    client.emit(Events.MessageCreate, mockMessage);
+    client.emit('messageCreate', mockMessage);
   }, 1000);
   
   // Cleanup after 3 seconds
