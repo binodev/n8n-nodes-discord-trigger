@@ -21,7 +21,7 @@
     "type": "git",
     "url": "https://github.com/binodev/n8n-nodes-discord-trigger.git"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
