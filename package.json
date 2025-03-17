@@ -1,5 +1,5 @@
 {
-  "name": "n8n-nodes-discord-trigger",
+  "name": "@binodev/n8n-nodes-discord-trigger",
   "version": "0.1.0",
   "description": "n8n node to trigger workflows based on Discord messages",
   "keywords": [

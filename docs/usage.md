@@ -37,7 +37,11 @@ This guide explains how to configure and use the Discord Trigger node for n8n.
 
 ## Configuration in n8n
 
-1. Install the Discord Trigger node in your n8n instance
+1. Install the Discord Trigger node in your n8n instance:
+   ```
+   npm install @binodev/n8n-nodes-discord-trigger
+   ```
+   Or through the n8n interface: Settings > Community Nodes > Install > Enter `@binodev/n8n-nodes-discord-trigger`
 2. Create a new workflow
 3. Add a "Discord Trigger" node
 4. Create new OAuth2 credentials:

@@ -1,4 +1,4 @@
-# n8n-nodes-discord-trigger
+# @binodev/n8n-nodes-discord-trigger
 
 This is an n8n community node that provides a trigger for Discord messages using OAuth2 authentication. It allows you to securely listen for new messages from Discord bots in specific channels and trigger n8n workflows based on these messages.
 
@@ -16,14 +16,14 @@ This is an n8n community node that provides a trigger for Discord messages using
 
 ### npm
 ```bash
-npm install n8n-nodes-discord-trigger
+npm install @binodev/n8n-nodes-discord-trigger
 ```
 
 ### n8n
 In your n8n installation:
 1. Go to **Settings > Community Nodes**
 2. Select **Install**
-3. Enter `n8n-nodes-discord-trigger` in **Enter npm package name**
+3. Enter `@binodev/n8n-nodes-discord-trigger` in **Enter npm package name**
 4. Agree to the risks of using community nodes
 5. Select **Install**
 
