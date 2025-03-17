@@ -1,0 +1,61 @@
+{
+  "name": "n8n-nodes-discord-trigger",
+  "version": "0.1.0",
+  "description": "n8n node to trigger workflows based on Discord messages",
+  "keywords": [
+    "n8n",
+    "n8n-node",
+    "n8n-community-node",
+    "discord",
+    "webhook",
+    "trigger",
+    "bot"
+  ],
+  "license": "MIT",
+  "homepage": "https://n8n.io",
+  "author": {
+    "name": "Gabin PADONOU",
+    "email": "padonougabin10@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binodev/n8n-nodes-discord-trigger.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .ts",
+    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/DiscordOAuth2Api.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/DiscordTrigger/DiscordTrigger.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.16.0",
+    "@types/request-promise-native": "^1.0.18",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "eslint": "^8.39.0",
+    "eslint-plugin-n8n-nodes-base": "^1.14.0",
+    "n8n-core": "^0.162.0",
+    "n8n-workflow": "^0.148.0",
+    "prettier": "^2.8.8",
+    "typescript": "~4.9.5"
+  },
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "axios": "^1.4.0"
+  }
+} 

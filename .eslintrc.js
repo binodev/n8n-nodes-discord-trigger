@@ -1,0 +1,36 @@
+module.exports = {
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: 'tsconfig.json',
+    sourceType: 'module',
+  },
+  plugins: ['@typescript-eslint/eslint-plugin', 'eslint-plugin-n8n-nodes-base'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+  ],
+  root: true,
+  env: {
+    node: true,
+  },
+  ignorePatterns: ['.eslintrc.js', 'dist/**/*'],
+  rules: {
+    '@typescript-eslint/interface-name-prefix': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    'n8n-nodes-base/node-param-description-missing-for-return-all': 'error',
+    'n8n-nodes-base/node-param-description-wrong-for-dynamic-options': 'error',
+    'n8n-nodes-base/node-param-description-missing-for-dynamic-options': 'error',
+    'n8n-nodes-base/node-param-option-value-not-displayed-as-user-expects': 'error',
+    'n8n-nodes-base/node-param-display-name-wrong-for-dynamic-multi-options': 'error',
+    'n8n-nodes-base/node-param-display-name-wrong-for-dynamic-options': 'error',
+    'n8n-nodes-base/node-param-description-missing-for-limit': 'error',
+    'n8n-nodes-base/node-param-default-missing': 'error',
+    'n8n-nodes-base/node-param-default-wrong-for-simplify': 'error',
+    'n8n-nodes-base/node-param-description-missing-for-simplify': 'error',
+    'n8n-nodes-base/node-param-display-name-wrong-for-simplify': 'error',
+    'n8n-nodes-base/node-param-description-fileType-not-in-camelCase': 'error',
+    'n8n-nodes-base/node-param-operation-without-no-data-expression': 'error',
+    'n8n-nodes-base/node-param-resource-with-plural-option': 'error',
+  },
+}; 

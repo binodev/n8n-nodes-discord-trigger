@@ -1,0 +1,62 @@
+{
+  "name": "Discord Message Trigger Example",
+  "nodes": [
+    {
+      "parameters": {
+        "event": "messageCreated",
+        "channelId": "YOUR_CHANNEL_ID",
+        "onlyBot": true,
+        "botId": "YOUR_BOT_ID"
+      },
+      "name": "Discord Trigger",
+      "type": "n8n-nodes-discord-trigger.discordTrigger",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "message",
+              "value": "={{ $json.content }}"
+            },
+            {
+              "name": "author",
+              "value": "={{ $json.author.username }}"
+            },
+            {
+              "name": "timestamp",
+              "value": "={{ new Date($json.createdTimestamp).toISOString() }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set Message Data",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Discord Trigger": {
+      "main": [
+        [
+          {
+            "node": "Set Message Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+} 

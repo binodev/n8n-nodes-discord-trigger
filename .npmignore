@@ -1,0 +1,29 @@
+# Source
+src/
+tsconfig.json
+.eslintrc.js
+.prettierrc.js
+.editorconfig
+
+# Git
+.git/
+.github/
+.gitignore
+
+# Tests
+test/
+__tests__/
+*.spec.ts
+*.test.ts
+
+# Misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.vscode/
+.idea/
+*.log
+node_modules/ 
