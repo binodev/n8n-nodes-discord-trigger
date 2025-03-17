@@ -9,7 +9,7 @@
         "botId": "YOUR_BOT_ID"
       },
       "name": "Discord Trigger",
-      "type": "@binodev/n8n-nodes-discord-trigger.discordTrigger",
+      "type": "@binodev/n8n-nodes-discord-trigger.binodevDiscordTrigger",
       "typeVersion": 1,
       "position": [
         250,

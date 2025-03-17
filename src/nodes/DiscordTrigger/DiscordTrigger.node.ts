@@ -11,7 +11,7 @@ import {
 export class DiscordTrigger implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Discord Trigger',
-		name: 'discordTrigger',
+		name: 'binodevDiscordTrigger',
 		icon: 'file:discord.svg',
 		group: ['trigger'],
 		version: 1,
